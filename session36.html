@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(white, violet);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: violet;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes move {
+            0% {
+                color: violet;
+                transform: translateX(-100px) rotate(-15deg);
+            }
+
+            50% {
+                color: red;
+            }
+
+            100% {
+                color: violet;
+                transform: translateX(100px) rotate(15deg);
+            }
+        }
+
+        u {
+            color: violet;
+        }
+
+        h3 {
+            color: purple;
+        }
+
+        label {
+            color: navy;
+            font-weight: bold;
+
+        }
+
+        button {
+            padding: 10px;
+            background-color: hotpink;
+            border-radius: 20px;
+            border: 4px outset yellow;
+            color: yellow;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <u>
+            <h1>Quiz App</h1>
+        </u>
+    </header>
+    <h3>1. What is the name of the element FE?</h3>
+    <label for="">Iron</label>
+    <input type="radio" name="element" id="" value="iron">
+    <label for="">Steel</label>
+    <input type="radio" name="element" id="" value="steel"><br><br>
+    <label for="">Copper</label>
+    <input type="radio" name="element" id="" value="copper">
+    <label for="">Potassium</label>
+    <input type="radio" name="element" id="" value="potassium">
+    <h3>2. What does BBC stand for?</h3>
+    <label for="">Berlin Broadcasting Company</label>
+    <input type="radio" name="company" id="" value="berlin">
+    <label for="">Bombay Broadcasting Company</label>
+    <input type="radio" name="company" id="" value="bombay"><br><br>
+    <label for="">British Broadcasting Corporation</label>
+    <input type="radio" name="company" id="" value="british">
+    <label for="">Big Bad Company</label>
+    <input type="radio" name="company" id="" value="bad">
+    <h3>3. What is the capital of Greece?</h3>
+    <label for="">Venice</label>
+    <input type="radio" name="capital" id="" value="venice">
+    <label for="">Rome</label>
+    <input type="radio" name="capital" id="" value="rome"><br><br>
+    <label for="">Aethens</label>
+    <input type="radio" name="capital" id="" value="athens">
+    <label for="">Sparta</label>
+    <input type="radio" name="capital" id="" value="sparta">
+    <h3>4. which is the smallest country in the world?</h3>
+    <label for="">Goa</label>
+    <input type="radio" name="country" id="" value="goa">
+    <label for="">Somalia</label>
+    <input type="radio" name="country" id="" value="somalia"><br><br>
+    <label for="">Vatican City</label>
+    <input type="radio" name="country" id="" value="vatican">
+    <label for="">Venezuela</label>
+    <input type="radio" name="country" id="" value="venezuela">
+    <h3>5. What is the population of India?</h3>
+    <label for="">1.3 B</label>
+    <input type="radio" name="india" id="" value="1.3">
+    <label for="">1.4 B</label>
+    <input type="radio" name="india" id="" value="1.4"><br><br>
+    <label for="">1.5 B</label>
+    <input type="radio" name="india" id="" value="1.5">
+    <label for="">1.6 B</label>
+    <input type="radio" name="india" id="" value="1.6"><br><br>
+    <a href="session37.html"><button onclick="submitanswer()">Submit Answers</button></a>
+</body>
+<script>
+    var score = 0;
+    function submitanswer() {
+        var element = document.
+            querySelector('input[name="element"]:checked').value;
+        if (element == "iron") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var company = document.
+            querySelector('input[name="company"]:checked').value
+        if (company == "british") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var capital = document.
+            querySelector('input[name="capital"]:checked').value
+        if (capital == "athens") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var country = document.
+            querySelector('input[name="country"]:checked').value;
+        if (country == "vatican") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var india = document.
+            querySelector('input[name="india"]:checked').value;
+        if (india == "1.3") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+    }
+</script>
+
+</html>
